@@ -1,0 +1,60 @@
+/**
+ * 登录注册文案 —— Português (Brasil)（L2）。
+ *
+ * ⚠️ key 集合与 en-US **完全一致**（由 generate.py 保证）。
+ *    占位符也必须一致 —— `packages/ui` 的 findPlaceholderMismatches() 会校验。
+ */
+
+export const ptBR = {
+  'identity.title.signIn': 'Entrar',
+  'identity.title.signUp': 'Cadastrar-se',
+  'identity.subtitle.signIn': 'Entre para continuar usando seu espaço acadêmico',
+  'identity.subtitle.signUp': 'Crie uma conta para começar sua jornada acadêmica',
+  'identity.tab.signIn': 'Entrar',
+  'identity.tab.signUp': 'Cadastrar-se',
+  'identity.field.email': 'E-mail',
+  'identity.field.emailPlaceholder': 'name@example.com',
+  'identity.field.password': 'Senha',
+  'identity.field.passwordPlaceholder': 'Pelo menos 10 caracteres, com número e letra',
+  'identity.field.phone': 'Número de telefone',
+  'identity.field.phonePlaceholder': '13800138000',
+  'identity.field.code': 'Código de verificação',
+  'identity.field.codePlaceholder': '6 dígitos',
+  'identity.field.displayName': 'Nome de exibição',
+  'identity.field.displayNamePlaceholder': 'Opcional',
+  'identity.action.signIn': 'Entrar',
+  'identity.action.signUp': 'Cadastrar-se',
+  'identity.action.sendCode': 'Enviar código',
+  'identity.action.resendCode': 'Reenviar em {seconds}s',
+  'identity.action.wechat': 'Entrar com WeChat',
+  'identity.action.google': 'Entrar com Google',
+  'identity.action.github': 'Entrar com GitHub',
+  'identity.action.switchToSignUp': 'Sem conta? Cadastre-se',
+  'identity.action.switchToSignIn': 'Já tem conta? Entre',
+  'identity.action.back': 'Voltar',
+  'identity.divider.or': 'ou',
+  'identity.state.sending': 'Enviando…',
+  'identity.state.verifying': 'Verificando…',
+  'identity.state.redirecting': 'Redirecionando…',
+  'identity.error.emailRequired': 'O e-mail é obrigatório',
+  'identity.error.emailInvalid': 'Endereço de e-mail inválido',
+  'identity.error.emailTaken': 'Este e-mail já está registrado',
+  'identity.error.passwordRequired': 'A senha é obrigatória',
+  'identity.error.passwordTooShort': 'A senha deve ter pelo menos 10 caracteres',
+  'identity.error.passwordNeedsNumber': 'A senha deve conter um número',
+  'identity.error.passwordNeedsLetter': 'A senha deve conter uma letra',
+  'identity.error.phoneRequired': 'O número de telefone é obrigatório',
+  'identity.error.phoneInvalid': 'Número de telefone inválido',
+  'identity.error.codeRequired': 'O código de verificação é obrigatório',
+  'identity.error.codeInvalid': 'Código de verificação inválido ou expirado',
+  'identity.error.credentialsInvalid': 'E-mail ou senha incorretos',
+  'identity.error.accountSuspended': 'Esta conta está suspensa. Contate um administrador.',
+  'identity.error.network': 'Erro de rede. Verifique sua conexão e tente novamente.',
+  'identity.error.unknown': 'Ocorreu um erro desconhecido',
+  'identity.hint.emailRequired': 'Precisamos verificar seu e-mail',
+  'identity.hint.emailRequiredDescription':
+    'Seu e-mail é usado para receber a verificação e recuperar a senha. Alguns métodos de login (como WeChat) não fornecem e-mail — você precisará adicioná-lo manualmente.',
+  'identity.hint.codeSent': 'Código de verificação enviado para {email}',
+  'identity.hint.agreeToTerms':
+    'Ao se cadastrar, você concorda com os Termos de Serviço e a Política de Privacidade',
+} as const;

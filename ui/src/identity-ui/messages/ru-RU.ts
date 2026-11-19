@@ -1,0 +1,60 @@
+/**
+ * 登录注册文案 —— Русский（L2）。
+ *
+ * ⚠️ key 集合与 en-US **完全一致**（由 generate.py 保证）。
+ *    占位符也必须一致 —— `packages/ui` 的 findPlaceholderMismatches() 会校验。
+ */
+
+export const ruRU = {
+  'identity.title.signIn': 'Войти',
+  'identity.title.signUp': 'Регистрация',
+  'identity.subtitle.signIn': 'Войдите, чтобы продолжить работу в академическом пространстве',
+  'identity.subtitle.signUp': 'Создайте аккаунт и начните свой академический путь',
+  'identity.tab.signIn': 'Войти',
+  'identity.tab.signUp': 'Регистрация',
+  'identity.field.email': 'Электронная почта',
+  'identity.field.emailPlaceholder': 'name@example.com',
+  'identity.field.password': 'Пароль',
+  'identity.field.passwordPlaceholder': 'Не менее 10 символов, с цифрой и буквой',
+  'identity.field.phone': 'Номер телефона',
+  'identity.field.phonePlaceholder': '13800138000',
+  'identity.field.code': 'Код подтверждения',
+  'identity.field.codePlaceholder': '6 цифр',
+  'identity.field.displayName': 'Отображаемое имя',
+  'identity.field.displayNamePlaceholder': 'Необязательно',
+  'identity.action.signIn': 'Войти',
+  'identity.action.signUp': 'Зарегистрироваться',
+  'identity.action.sendCode': 'Отправить код',
+  'identity.action.resendCode': 'Повторить через {seconds} с',
+  'identity.action.wechat': 'Войти через WeChat',
+  'identity.action.google': 'Войти через Google',
+  'identity.action.github': 'Войти через GitHub',
+  'identity.action.switchToSignUp': 'Нет аккаунта? Зарегистрируйтесь',
+  'identity.action.switchToSignIn': 'Уже есть аккаунт? Войдите',
+  'identity.action.back': 'Назад',
+  'identity.divider.or': 'или',
+  'identity.state.sending': 'Отправка…',
+  'identity.state.verifying': 'Проверка…',
+  'identity.state.redirecting': 'Перенаправление…',
+  'identity.error.emailRequired': 'Укажите электронную почту',
+  'identity.error.emailInvalid': 'Некорректный адрес электронной почты',
+  'identity.error.emailTaken': 'Этот адрес уже зарегистрирован',
+  'identity.error.passwordRequired': 'Укажите пароль',
+  'identity.error.passwordTooShort': 'Пароль должен содержать не менее 10 символов',
+  'identity.error.passwordNeedsNumber': 'Пароль должен содержать цифру',
+  'identity.error.passwordNeedsLetter': 'Пароль должен содержать букву',
+  'identity.error.phoneRequired': 'Укажите номер телефона',
+  'identity.error.phoneInvalid': 'Некорректный номер телефона',
+  'identity.error.codeRequired': 'Укажите код подтверждения',
+  'identity.error.codeInvalid': 'Код подтверждения недействителен или истёк',
+  'identity.error.credentialsInvalid': 'Неверная почта или пароль',
+  'identity.error.accountSuspended': 'Аккаунт заблокирован. Обратитесь к администратору.',
+  'identity.error.network': 'Ошибка сети. Проверьте подключение и повторите попытку.',
+  'identity.error.unknown': 'Произошла неизвестная ошибка',
+  'identity.hint.emailRequired': 'Нам нужно подтвердить вашу электронную почту',
+  'identity.hint.emailRequiredDescription':
+    'Почта используется для подтверждения и восстановления пароля. Некоторые способы входа (например, WeChat) не дают адрес почты — его нужно будет указать вручную.',
+  'identity.hint.codeSent': 'Код подтверждения отправлен на {email}',
+  'identity.hint.agreeToTerms':
+    'Регистрируясь, вы соглашаетесь с Условиями использования и Политикой конфиденциальности',
+} as const;

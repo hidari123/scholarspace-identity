@@ -1,0 +1,60 @@
+/**
+ * 登录注册文案 —— Español（L2）。
+ *
+ * ⚠️ key 集合与 en-US **完全一致**（由 generate.py 保证）。
+ *    占位符也必须一致 —— `packages/ui` 的 findPlaceholderMismatches() 会校验。
+ */
+
+export const esES = {
+  'identity.title.signIn': 'Iniciar sesión',
+  'identity.title.signUp': 'Registrarse',
+  'identity.subtitle.signIn': 'Inicia sesión para seguir usando tu espacio académico',
+  'identity.subtitle.signUp': 'Crea una cuenta para empezar tu viaje académico',
+  'identity.tab.signIn': 'Iniciar sesión',
+  'identity.tab.signUp': 'Registrarse',
+  'identity.field.email': 'Correo electrónico',
+  'identity.field.emailPlaceholder': 'name@example.com',
+  'identity.field.password': 'Contraseña',
+  'identity.field.passwordPlaceholder': 'Al menos 10 caracteres, con un número y una letra',
+  'identity.field.phone': 'Número de teléfono',
+  'identity.field.phonePlaceholder': '13800138000',
+  'identity.field.code': 'Código de verificación',
+  'identity.field.codePlaceholder': '6 dígitos',
+  'identity.field.displayName': 'Nombre visible',
+  'identity.field.displayNamePlaceholder': 'Opcional',
+  'identity.action.signIn': 'Iniciar sesión',
+  'identity.action.signUp': 'Registrarse',
+  'identity.action.sendCode': 'Enviar código',
+  'identity.action.resendCode': 'Reenviar en {seconds} s',
+  'identity.action.wechat': 'Iniciar sesión con WeChat',
+  'identity.action.google': 'Iniciar sesión con Google',
+  'identity.action.github': 'Iniciar sesión con GitHub',
+  'identity.action.switchToSignUp': '¿Sin cuenta? Regístrate',
+  'identity.action.switchToSignIn': '¿Ya tienes cuenta? Inicia sesión',
+  'identity.action.back': 'Atrás',
+  'identity.divider.or': 'o',
+  'identity.state.sending': 'Enviando…',
+  'identity.state.verifying': 'Verificando…',
+  'identity.state.redirecting': 'Redirigiendo…',
+  'identity.error.emailRequired': 'El correo electrónico es obligatorio',
+  'identity.error.emailInvalid': 'Correo electrónico no válido',
+  'identity.error.emailTaken': 'Este correo electrónico ya está registrado',
+  'identity.error.passwordRequired': 'La contraseña es obligatoria',
+  'identity.error.passwordTooShort': 'La contraseña debe tener al menos 10 caracteres',
+  'identity.error.passwordNeedsNumber': 'La contraseña debe contener un número',
+  'identity.error.passwordNeedsLetter': 'La contraseña debe contener una letra',
+  'identity.error.phoneRequired': 'El número de teléfono es obligatorio',
+  'identity.error.phoneInvalid': 'Número de teléfono no válido',
+  'identity.error.codeRequired': 'El código de verificación es obligatorio',
+  'identity.error.codeInvalid': 'Código de verificación no válido o caducado',
+  'identity.error.credentialsInvalid': 'Correo electrónico o contraseña incorrectos',
+  'identity.error.accountSuspended': 'Esta cuenta está suspendida. Contacta con un administrador.',
+  'identity.error.network': 'Error de red. Comprueba tu conexión e inténtalo de nuevo.',
+  'identity.error.unknown': 'Se ha producido un error desconocido',
+  'identity.hint.emailRequired': 'Necesitamos verificar tu correo electrónico',
+  'identity.hint.emailRequiredDescription':
+    'Tu correo electrónico se usa para recibir la verificación y recuperar la contraseña. Algunos métodos de acceso (como WeChat) no proporcionan correo electrónico, así que tendrás que añadirlo manualmente.',
+  'identity.hint.codeSent': 'Código de verificación enviado a {email}',
+  'identity.hint.agreeToTerms':
+    'Al registrarte aceptas los Términos del Servicio y la Política de Privacidad',
+} as const;

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "compilerOptions": {
+    /* ── 严格性 ───────────────────────────────────── */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+
+    /* ── 模块 ─────────────────────────────────────── */
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* ── JSX ──────────────────────────────────────── */
+    "jsx": "react-jsx",
+
+    /* ── 输出 ─────────────────────────────────────── */
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "importHelpers": false,
+
+    /* ── 路径别名 ──────────────────────────────────── */
+    /*
+     * ⚠️ 这里**故意不设** `paths` 与 `baseUrl`。
+     *
+     * 原因 1 —— `baseUrl` 已被 TypeScript 移除：
+     *   TS 6.0 起废弃（TS5101），TS 7.0 直接报错（TS5102）：
+     *       Option 'baseUrl' has been removed.
+     *
+     * 原因 2 —— 更关键：`paths` 的相对路径**解析基准是声明它的那份
+     * tsconfig 所在目录**，不是使用方。
+     *
+     *   所以 base 里写 `"@/*": ["./src/*"]` 时，它指的是
+     *   **base 文件自己目录下的 src/**（packages/conventions/typescript/src/），
+     *   而不是消费方的 src/ —— 别名会指向不存在的路径。
+     *
+     *   （去掉 baseUrl 之前，baseUrl="." 让它相对 base 文件解析；
+     *     行为一样是「相对 base」，只是不报错而已。）
+     *
+     * ✅ 正确做法 —— **每个包在自己的 tsconfig 里声明 paths**：
+     *
+     *   {
+     *     "extends": "./tsconfig.base.json",
+     *     "compilerOptions": {
+     *       "paths": { "@/*": ["./src/*"] }
+     *     }
+     *   }
+     *
+     *   这样路径相对**消费方自己的目录**解析，跨仓同步后依然正确。
+     *
+     * 参考：https://aka.ms/ts6
+     */
+
+    /* ── 互操作 ───────────────────────────────────── */
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  },
+
+  "exclude": ["node_modules", "dist", "build", ".next", "coverage", "e2e"]
+}

@@ -42,17 +42,38 @@ scholarspace-identity/
 │   │   ├── flows.py             各注册方式的具体流程
 │   │   └── runner.py            对外执行入口
 │   │
-│   ├── identity-providers/      各登录方式的适配（待建）
-│   │   ├── email_password/
-│   │   ├── oauth2_wechat/       微信开放平台网站应用
-│   │   ├── oauth2_github/
-│   │   ├── oauth2_google/
-│   │   └── sms/
+│   ├── identity-providers/      各登录方式的适配
+│   │   ├── base.py              Provider 统一抽象
+│   │   ├── oauth2/
+│   │   │   ├── state.py         ⭐ 共享的防 CSRF state 机制
+│   │   │   ├── wechat.py        微信开放平台网站应用
+│   │   │   └── standard.py      Google / GitHub
+│   │   └── password/
+│   │       └── email_password.py  argon2 / bcrypt + 验证码
 │   │
-│   └── identity-http/           FastAPI 实现 + 用户表存储（待建）
+│   └── identity-http/           HTTP 接口层
+│       ├── ports.py             存储端口（Protocol）
+│       ├── schemas.py           请求/响应模型
+│       ├── app.py               FastAPI 应用工厂
+│       ├── routers/auth.py      认证路由
+│       └── storage/in_memory.py 内存实现（开发/测试）
 │
 └── ui/                          登录/注册前端组件（待建）
 ```
+
+---
+
+## 状态
+
+| 包 | 测试 | 门禁 |
+|---|---|---|
+| `identity-core` | 39 | ✅ 全绿 |
+| `identity-flows` | 23 | ✅ 全绿 |
+| `identity-providers` | 55 | ✅ 全绿 |
+| `identity-http` | 22 | ✅ 全绿 |
+| **合计** | **139** | |
+
+每包的门禁：`ruff check` + `ruff format --check` + `mypy src/` + `pytest`
 
 ---
 

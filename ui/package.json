@@ -1,0 +1,62 @@
+{
+  "name": "@scholarspace/identity-ui",
+  "version": "0.1.0",
+  "description": "scholarspace 登录注册前端组件 —— 邮箱/微信/Google/GitHub",
+  "license": "UNLICENSED",
+  "type": "module",
+  "sideEffects": ["**/*.css"],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "test": "vitest run",
+    "verify": "npm-run-all --sequential typecheck lint test build"
+  },
+  "dependencies": {
+    "@scholarspace/ui": "file:../../scholarspace/packages/ui"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0 <20",
+    "react-dom": ">=18.0.0 <20"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": false
+    },
+    "react-dom": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "jsdom": "^26.0.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tsup": "^9.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  }
+}
